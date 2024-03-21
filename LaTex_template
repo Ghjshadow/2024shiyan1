@@ -1,0 +1,197 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[a4paper, left=3.17cm, right=3.17cm, top=2.54cm, bottom=2.54cm]{geometry}
+%设置页边距
+\usepackage{graphicx} 
+\usepackage[UTF8]{ctex}
+\usepackage{titlesec}
+\usepackage{setspace}%设计行间距
+\usepackage{microtype}
+\usepackage{tabularx}
+\usepackage{tabu}
+\usepackage{listings}
+\usepackage{makecell} % 导入 makecell 宏包,设置表格行高
+
+% 设置section标题的格式
+\titleformat{\section}
+{\normalfont\Large\bfseries} % 标题字体
+{\thesection} % 标题编号
+{1em} % 与编号之间的间距
+{} % 标题文本与编号之间的间距
+
+% 设置subsection标题的格式
+\titleformat{\subsection}
+{\normalfont\large\bfseries} % 标题字体
+{\thesubsection} % 标题编号
+{1em} % 与编号之间的间距
+{} % 标题文本与编号之间的间距
+
+% 设置subsubsection标题的格式
+\titleformat{\subsubsection}
+{\normalfont\normalsize\bfseries} % 标题字体
+{\thesubsubsection} % 标题编号
+{1em} % 与编号之间的间距
+{} % 标题文本与编号之间的间距
+
+\begin{document}
+
+% \thispagestyle{empty} % 禁用页眉页脚
+% \hfill % 将内容放置在页面的最右边
+% \vspace*{1cm} % 控制垂直间距
+% 组号：13
+
+% \begin{figure}
+    
+%     \centering
+%     \includegraphics[width=0.2\textwidth]{SHU.png} 
+%     \label{fig:example}
+%     \vspace{-3em} % 减小与下面标题的距离 3em
+% \end{figure}
+
+
+% \title{{\fontsize{26pt}{30pt}\selectfont 上海大学计算机工程与科学学院}\\[2em]{\bfseries\fontsize{40pt}{20pt}\selectfont\textls{实\kern0.8em验\kern0.8em报\kern0.8em告}}
+% \\[1em]{\fontsize{26pt}{20pt}\selectfont (数\kern0.2em据结\kern0.2em构\kern0.2em2)}}
+
+% \thispagestyle{empty} % 禁用页眉页脚
+\hfill % 将内容放置在页面的最右边
+\vspace*{1cm} % 控制垂直间距
+\fontsize{26pt}{30pt}\selectfont
+{组号：\underline{ 13 }}
+
+\vspace{-1em} % 控制垂直间距
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.2\textwidth]{SHU.png} 
+    \label{fig:example}
+    \vspace{-1em} % 控制垂直间距
+\end{figure}
+
+\begin{center} % 居中对齐
+\fontsize{26pt}{30pt}\selectfont
+上海大学计算机工程与科学学院\\[1.5em]
+\fontsize{40pt}{20pt}\selectfont
+\textbf{实\kern0.6em验\kern0.6em报\kern0.6em告}\\[0.5em]
+\fontsize{28pt}{20pt}\selectfont
+(数\kern0.2em据\kern0.2em结\kern0.2em构\kern0.2em2)
+\end{center}
+
+\date{}
+
+\pagenumbering{arabic}
+
+\vspace{2em} % 控制垂直间距
+
+\begin{center}
+\begin{tabular}{@{}l@{\hspace{1em}}c@{}}
+学\hspace{2em}期： & \underline{2023-2024年春季} \\
+组\hspace{2em}长： & \underline{\hspace{3em}xxx\hspace{3em}} \\
+学\hspace{2em}号： & \underline{\hspace{2em}xxxxxxxx\hspace{2em}} \\
+指导教师：          & \underline{\hspace{2.5em}朱能军\hspace{2.5em}}\\
+成绩评定：          & \underline{\hspace{3.5em}}\fontsize{20pt}{30pt}\selectfont{（教师评定）}
+\end{tabular}
+\end{center}
+
+\vspace{1em} % 控制垂直间距
+
+\begin{center}
+二〇二四年3月20日
+\end{center}
+
+\begin{center}
+{\fontsize{12pt}{1em}\selectfont
+\begin{tabu} to \textwidth {|X[c]|X[c]|X[c]|X[c]|X[c]|}
+\hline
+\multicolumn{5}{|c|}{\textbf{\fontsize{16pt}{1em}\selectfont{小组情况}}} \\ %合并第一行
+\hline
+登记序号  & 姓名  &	学号  & 贡献比 & 签名 \\
+\hline			
+1  & 张三  & 123456  & 33\%  & \\
+\hline
+2  & 李四  & 234567  & 33\%  & \\
+\hline
+3  & 王五  & 345678  & 33\%  & \\
+\hline
+\end{tabu}
+}
+\end{center}
+
+
+\vspace{2em}
+
+
+\begin{table}[!htb]
+    \centering
+    \fontsize{12pt}{2em}\selectfont
+    \begin{tabularx}{\textwidth}{|c|>{\centering\arraybackslash}X|}
+        \hline
+        \multicolumn{2}{|c|}{\textbf{\fontsize{16pt}{2em}\selectfont 实验概述}} \\ %合并第一行
+        \hline
+        \makecell{实验零  \\[2em]}& （熟悉上机环境、进度安排、评分制度；确定小组成员） \\
+        \hline
+        \makecell{实验一  \\[2em]}&  \\
+        \hline
+        \makecell{实验二 \\[2em]}&  \\
+        \hline
+        \makecell{实验三 \\[2em]}& \\
+        \hline
+        \makecell{实验四 \\[2em]}&  \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+
+\newpage
+
+\title{\fontsize{28pt}{0em}实验一}
+
+\maketitle
+\vspace{-5em}
+\section{实验题目}
+\section{实验内容}
+\section{解决方案}
+    \subsection{算法设计}
+    \fontsize{12pt}{1em}\selectfont{主要描述数据结构、算法思想、主要操作、用例分析、改进方法等}
+    \subsection{源程序代码}
+    \fontsize{12pt}{1em}\selectfont{（要求有必要注释、格式整齐、命名规范，利于阅读}
+    \subsection{实验结果}
+    \fontsize{12pt}{1em}\selectfont{（展示实验结果、测试情况、结果分析等）}
+    \subsection{算法分析}
+   \fontsize{12pt}{1em}\selectfont{（对算法空间、时间效率进行必要分析，可能的改进建议等）}
+   \subsection{总结与心得}
+    \fontsize{12pt}{1em}\selectfont{（主要描述实验过程中存在的问题、原因、解决方法、收获、对实验内容的其他应用思考等）}
+    
+\begin{table}
+	\centering
+	\caption{表格示例}%标题
+	\begin{tabular}{c c c c c c }%每一列居中
+		\hline %间隔横线
+		Dataset& Train Size & Test Size & Dimensions & Length & Classes\\
+		\hline
+		AWR& 275 & 300& 9 &144& 25\\
+		AF & 15& 15 &2& 640& 3\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection{代码插入示例}
+
+\lstset{
+numbers=left,                          	% 在左侧显示行号
+showstringspaces=false,        			% 不显示字符串中的空格
+frame=single,                         	% 设置代码块边框
+}
+
+\begin{lstlisting}[language=c]
+int main(int argc, char ** argv)
+{
+
+printf("Hello world! \n");
+
+return 0;
+}
+\end{lstlisting}
+
+
+
+
+\end{document}
